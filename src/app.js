@@ -3,25 +3,28 @@ import { VegaTree } from "../libraries/vegatree.js"
 
 const csvFile = "./data/mushrooms.csv"
 const trainingLabel = "class"
-const ignoredColumns = ['']
+const ignoredColumns = []
 
 function loadData() {
     Papa.parse(csvFile, {
         download: true,
         header: true,
         dynamicTyping: true,
-        complete: (results) => console.log(results.data)
+        complete: results => trainModel(results.data)
     })
 }
 
 function trainModel(data){
+    console.log(data)
     let decisionTree = new DecisionTree({
         ignoredAttributes: ignoredColumns,
-        traingSet: data,
+        trainingSet: data,
         categoryAttr: trainingLabel
     })
 
-    let visual = new VegaTree('#view', 800, 400, decisionTree.toJSON())
+    let visual = new VegaTree('#view', 1200, 500, decisionTree.toJSON())
 }
+
+// console.log(results.data)
 
 loadData()
