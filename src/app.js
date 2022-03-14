@@ -5,6 +5,11 @@ const csvFile = "./data/mushrooms.csv"
 const trainingLabel = "class"
 const ignoredColumns = []
 
+let data      = loadData()
+let trainData = data.slice(0, Math.floor(data.length * 0.8))
+let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
+
+
 function loadData() {
     Papa.parse(csvFile, {
         download: true,
@@ -24,7 +29,5 @@ function trainModel(data){
 
     let visual = new VegaTree('#view', 1200, 500, decisionTree.toJSON())
 }
-
-// console.log(results.data)
 
 loadData()
