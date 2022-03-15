@@ -29,13 +29,33 @@ function trainModel(data){
 
     let visual = new VegaTree('#view', 1200, 500, decisionTree.toJSON())
 
-    predict(decisionTree)
+    predictAll(decisionTree, testData)
 }
 
 loadData()
 
 
+function predictAll(decisionTree, testData) {
+    let amountCorrect = 0
 
+    for(let testShroom of testData) {
+        if(decisionTree.predict(testShroom) === testShroom.class) {
+          amountCorrect++
+          }
+    }
+
+    let accuracy = amountCorrect / testData.length
+
+    console.log("The Accuracy is: " + Math.round(accuracy*10000 *100, 4) /10000 + "%")
+}
+
+function predictOne(decisionTree, testData){
+    let prediction = decisionTree.predict(testData[0])
+
+    if(prediction === testData[0].class) {
+        console.log("CORRECTE  VOORSPELLING!")
+    }
+}
 
 
 function predict(decisionTree){
