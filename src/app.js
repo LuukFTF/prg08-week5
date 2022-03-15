@@ -16,6 +16,7 @@ function loadData() {
 }
 
 function trainModel(data){
+    data = data.sort(() => (Math.random() - 0.5))
     let trainData = data.slice(0, Math.floor(data.length * 0.8))
     let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
     console.log("testData:", testData)
@@ -40,13 +41,15 @@ function predictAll(decisionTree, testData) {
 
     for(let testShroom of testData) {
         if(decisionTree.predict(testShroom) === testShroom.class) {
-          amountCorrect++
+            amountCorrect++
           }
     }
 
     let accuracy = amountCorrect / testData.length
 
     console.log("The Accuracy is: " + Math.round(accuracy*10000 *100, 4) /10000 + "%")
+    console.log(accuracy)
+
 }
 
 function predictOne(decisionTree, testData){
