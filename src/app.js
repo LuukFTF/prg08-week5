@@ -6,9 +6,6 @@ const trainingLabel = "class"
 const ignoredColumns = []
 
 
-
-
-
 function loadData() {
     Papa.parse(csvFile, {
         download: true,
@@ -16,8 +13,6 @@ function loadData() {
         dynamicTyping: true,
         complete: results => trainModel(results.data)
     })
-
-
 }
 
 function trainModel(data){
