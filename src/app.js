@@ -5,9 +5,8 @@ const csvFile = "./data/mushrooms.csv"
 const trainingLabel = "class"
 const ignoredColumns = []
 
-let data      = loadData()
-// let trainData = data.slice(0, Math.floor(data.length * 0.8))
-// let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
+
+
 
 
 function loadData() {
@@ -17,13 +16,19 @@ function loadData() {
         dynamicTyping: true,
         complete: results => trainModel(results.data)
     })
+
+
 }
 
 function trainModel(data){
-    console.log(data)
+    let trainData = data.slice(0, Math.floor(data.length * 0.8))
+    let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
+    console.log("testData:", testData)
+    console.log("trainData:", trainData)
+
     let decisionTree = new DecisionTree({
         ignoredAttributes: ignoredColumns,
-        trainingSet: data,
+        trainingSet: trainData,
         categoryAttr: trainingLabel
     })
 
