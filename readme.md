@@ -17,21 +17,21 @@ https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/inleveropdracht.md
 ## Requirements
 
 Project
-    - [x] een van de drie datasets ingeladen (diabetes, mushrooms, titanic)
-    - [x] dataset als decision tree
-    - [x] accuracy uitgerekend
-    - [x] extra uitdaging gekozen en geprobeerd uit te werken
+- [x] een van de drie datasets ingeladen (diabetes, mushrooms, titanic)
+- [x] dataset als decision tree
+- [x] accuracy uitgerekend
+- [x] extra uitdaging gekozen en geprobeerd uit te werken
 Inleverdocument
-    - [x] welke data?
-    - [x] wat is de accuracy? 
-    - [x] hoe zou de accuracy beter kunnen?
-    - [x] hoe ver gekomen met de extra uitdaging?
+- [x] welke data?
+- [x] wat is de accuracy? 
+- [x] hoe zou de accuracy beter kunnen?
+- [x] hoe ver gekomen met de extra uitdaging?
 Reflectiedocument
-    - [x] Wat is het doel van je experiment?
-    - [x] Wat is de data (input), en wat wordt er voorspeld (output)?
-    - [x] Welk algoritme of library wordt gebruikt?
-    - [x] Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject?
-    - [x] Wat vond jij makkelijk of moeilijk aan het programmeren?
+- [x] Wat is het doel van je experiment?
+- [x] Wat is de data (input), en wat wordt er voorspeld (output)?
+- [x] Welk algoritme of library wordt gebruikt?
+- [x] Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject?
+- [x] Wat vond jij makkelijk of moeilijk aan het programmeren?
 
 
 ## Planning
@@ -54,16 +54,16 @@ Reflectiedocument
   - [x] screen recording 
   - [x] reflectiedocument
   - [x] last check
-  - [o] inleveren
+  - [x] inleveren
 
 ## Resources
 
-https://www.kaggle.com/datasets
-https://github.com/lagodiuk/decision-tree-js
-https://winkjs.org/wink-regression-tree/
-https://vega.github.io/vega/examples/tree-layout/
-https://www.papaparse.com/
-https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052
+https://www.kaggle.com/datasets  
+https://github.com/lagodiuk/decision-tree-js  
+https://winkjs.org/wink-regression-tree/  
+https://vega.github.io/vega/examples/tree-layout/  
+https://www.papaparse.com/   
+https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052  
 
 ## Datasets
 
@@ -78,17 +78,17 @@ Poisonous mushrooms dataset
 
 ## Notes
 
-https://www.kaggle.com/nirajvermafcb/comparing-various-ml-models-roc-curve-comparison
-https://www.kaggle.com/uciml/mushroom-classification/discussion/198420
-https://www.youtube.com/watch?v=7E7tl6rm7VM
-https://archive.ics.uci.edu/ml/datasets/Mushroom
-https://vega.github.io/
+https://www.kaggle.com/nirajvermafcb/comparing-various-ml-models-roc-curve-comparison  
+https://www.kaggle.com/uciml/mushroom-classification/discussion/198420  
+https://www.youtube.com/watch?v=7E7tl6rm7VM  
+https://archive.ics.uci.edu/ml/datasets/Mushroom  
+https://vega.github.io/  
 
 ## Dataset
-Poisonous mushrooms dataset
+Poisonous mushrooms dataset  
 https://www.kaggle.com/uciml/mushroom-classification
 
-1987-04-27
+1987-04-27  
 Original lables: edible, poisonous & unknown (last one combined in poisonous)
 
 Lables: edible=e & poisonous=p (2)
@@ -161,7 +161,7 @@ Attributes:
 Omdat de dataset eerst word gehusseld is bij elke refresh de uitkomst anders. 
 De accuracy schommelt tussen de 99% en 100%.
 
-Hoe zou de accuracy beter kunnen?
+**Hoe zou de accuracy beter kunnen?**  
 De accuracy zou beter worden als je meer trainingsdata hebt of je zou kunnen spelen met de trainingsdepth. Maar uit mijn uitkomsten is dat nieteens nodig omdat vrijwel elke keer het een hogere accuracy heeft dan 99.8%.
 
 **Hoe ver gekomen met de extra uitdaging?**  
@@ -176,17 +176,17 @@ https://youtu.be/G1enOuou4Ss
 **Wat is het doel van je experiment?**  
 Leren hoe je moet werken met grote hoeveelheid data in javascript. Leren hoe je een decision tree genereert. Leren hoe je deze informatie kan visualiseren en relevante statistieken kan halen uit de analyse. 
 
-**Wat is de data (input), en wat wordt er voorspeld (output)?**  
+**Wat is de data (input), en wat wordt er voorspeld (output)?**   
 Mijn input waren 8124 rijen van 22 kolommen en er werd voorspeld of de paddenstoel eetbaar of giftig is.
 
-**Welk algoritme of library wordt gebruikt?**  
+**Welk algoritme of library wordt gebruikt?**   
 Ik heb gebruik gemaakt van de volgende algoritmes en libraries:
 - PapaParse (https://www.papaparse.com/0)
 - Vega Tree (https://vega.github.io/vega/)
 - DecisionTree (https://github.com/lagodiuk/decision-tree-js)
 
-**Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject?**  
+**Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject?**   
 Ja ik kan de kennis die heb opgedaan over het omgaan met data, de decision tree en het visualiseren voor mijn eindopdracht gebruiken.
 
-**Wat vond jij makkelijk of moeilijk aan het programmeren?**  
+**Wat vond jij makkelijk of moeilijk aan het programmeren?**   
 Ik heb deze opdracht binnen 1.5 week kunnen afmaken, de uitdaging was niet te moeilijk en ook niet te makkelijk: het was perfect. Er was genoeg uitdaging om het interresant te maken, de enige keer dat ik tegen iets aan liep heb ik het gevraagd aan een van de docenten (Erik) en kon ik daarna vlekkeloos verder. Ik vond het een leuke en interresante opdracht!
