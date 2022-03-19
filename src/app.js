@@ -16,7 +16,7 @@ function loadData() {
 }
 
 function trainModel(data){
-    // data.sort(() => (Math.random() - 0.5))
+    data.sort(() => (Math.random() - 0.5))
     let trainData = data.slice(0, Math.floor(data.length * 0.8))
     let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
     console.log("testData:", testData)
