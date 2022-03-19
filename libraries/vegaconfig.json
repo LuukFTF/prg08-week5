@@ -85,7 +85,8 @@
         "enter": {
           "text": {"field": "name"},
           "fontSize": {"value": 9},
-          "baseline": {"value": "middle"}
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#fff"}
         },
         "update": {
           "x": {"field": "x"},
