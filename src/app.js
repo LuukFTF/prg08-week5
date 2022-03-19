@@ -16,7 +16,7 @@ function loadData() {
 }
 
 function trainModel(data){
-    data = data.sort(() => (Math.random() - 0.5))
+    // data.sort(() => (Math.random() - 0.5))
     let trainData = data.slice(0, Math.floor(data.length * 0.8))
     let testData  = data.slice(Math.floor(data.length * 0.8) + 1)
     console.log("testData:", testData)
@@ -38,18 +38,59 @@ loadData()
 
 function predictAll(decisionTree, testData) {
     let amountCorrect = 0
+    let predictedEActualE = 0
+    let predictedPActualP = 0
+
+    let predictedPActualE = 0
+    let predictedEActualP = 0
 
     for(let testShroom of testData) {
-        if(decisionTree.predict(testShroom) === testShroom.class) {
+        let prediction = decisionTree.predict(testShroom) 
+
+        if(prediction === testShroom.class) {
             amountCorrect++
           }
+
+          
+        if(prediction == "e" && testShroom.class == "p") {
+            predictedEActualP++
+        }
+        if(prediction == "p" && testShroom.class == "e") {
+            predictedPActualE++
+        }
+
+        if(prediction == "e" && testShroom.class == "e") {
+            predictedEActualE++
+        }
+        if(prediction == "p" && testShroom.class == "p") {
+            predictedPActualP++
+        }
+
     }
 
     let accuracy = amountCorrect / testData.length
 
     console.log("The Accuracy is: " + Math.round(accuracy*10000 *100, 4) /10000 + "%")
-    console.log(accuracy)
+    // console.log(accuracy)
 
+    console.log("predictedEActualP: "+predictedEActualP, 
+            "predictedEActualP: "+predictedPActualE,
+            "predictedPActualP: "+predictedPActualP,
+            "predictedEActualE: "+predictedEActualE,)
+
+    generateConfusionMatrix(predictedEActualP, predictedPActualE, predictedPActualP, predictedEActualE)
+}
+
+function generateConfusionMatrix(predictedEActualP, predictedPActualE, predictedPActualP, predictedEActualE) {
+    const EEel = document.getElementById('predictedEActualE')
+    const PEel = document.getElementById('predictedPActualE')
+    const EPel = document.getElementById('predictedEActualP')
+    const PPel = document.getElementById('predictedPActualP')
+
+    EEel.innerText = predictedEActualE;
+    PEel.innerText = predictedPActualE;
+    EPel.innerText = predictedEActualP;
+    PPel.innerText = predictedPActualP;
 }
 
 function predictOne(decisionTree, testData){
